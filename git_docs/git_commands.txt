@@ -1,0 +1,42 @@
+git init
+git add fileA.txt
+git commit -m "add feature 1"
+git log --oneline --graph
+git branch featureX
+git checkout featureX
+git branch
+nano fileA.txt
+git add fileA.txt
+git commit -m "add feature mistake"
+git log --oneline --graph
+git checkout master
+git log --oneline --graph --all
+git checkout featureX
+nano fileA.txt
+git add fileA.txt
+git commit -m "added feature bigger mistake"
+git log --oneline --graph --all
+git branch -d featureX
+git branch -D featureX
+git reflog
+git checkout -b featureX dd691d8
+
+#undo modified files
+git restore filename
+
+#resolving merge conflicts
+Checkout master
+Merge feature
+There's a conflict
+Open file and resolve merge conflict using judgment
+Stage file 
+Commit the merge commit
+Delete feature label
+
+#ammend a commit message
+git commit --amend -m "add fileA.txt"
+
+#squash
+git rebase -i 33d3
+
+git tag -a -m "includes feature 1" v0.1
